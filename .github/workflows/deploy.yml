@@ -27,14 +27,14 @@ jobs:
           cache: 'npm'
 
       - name: Install root dependencies
-        run: npm ci
+        run: npm install
 
       - name: Install frontend dependencies
-        run: npm ci
+        run: npm install
         working-directory: ./frontend
 
       - name: Install infrastructure dependencies
-        run: npm ci
+        run: npm install
         working-directory: ./infrastructure
 
       - name: Build frontend
