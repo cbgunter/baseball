@@ -12,7 +12,14 @@
       "Bash(git remote add:*)",
       "Bash(git push:*)",
       "Bash(npx cdk:*)",
-      "Bash(npm run cdk:*)"
+      "Bash(npm run cdk:*)",
+      "Bash(npm run build:*)",
+      "Bash(aws cloudformation describe-stacks:*)",
+      "Bash(aws s3 sync:*)",
+      "Bash(aws s3api get-bucket-policy:*)",
+      "Bash(aws cloudfront get-distribution:*)",
+      "Bash(npm run deploy:*)",
+      "Bash(aws cloudfront create-invalidation:*)"
     ],
     "deny": [],
     "ask": []

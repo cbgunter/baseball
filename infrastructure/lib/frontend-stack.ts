@@ -24,8 +24,6 @@ export class FrontendStack extends cdk.Stack {
     // S3 Bucket for website hosting
     this.bucket = new s3.Bucket(this, 'WebsiteBucket', {
       bucketName: `baseball-bathroom-${this.account}`,
-      websiteIndexDocument: 'index.html',
-      websiteErrorDocument: 'index.html',
       publicReadAccess: false, // CloudFront OAI will handle access
       blockPublicAccess: s3.BlockPublicAccess.BLOCK_ALL,
       removalPolicy: cdk.RemovalPolicy.RETAIN, // Keep bucket on stack deletion
@@ -60,7 +58,7 @@ export class FrontendStack extends cdk.Stack {
     // CloudFront Distribution
     this.distribution = new cloudfront.Distribution(this, 'Distribution', {
       defaultBehavior: {
-        origin: new origins.S3Origin(this.bucket, {
+        origin: origins.S3BucketOrigin.withOriginAccessIdentity(this.bucket, {
           originAccessIdentity,
         }),
         viewerProtocolPolicy:
