@@ -1,0 +1,20 @@
+{
+  "name": "baseball-bathroom-analogies",
+  "version": "1.0.0",
+  "description": "Baseball terms to bathroom analogies website",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend/lambdas/*",
+    "infrastructure"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspace=frontend",
+    "deploy": "npm run deploy --workspace=infrastructure",
+    "cdk": "npm run cdk --workspace=infrastructure"
+  },
+  "keywords": ["baseball", "humor"],
+  "author": "Casey Hunter",
+  "license": "MIT"
+}
