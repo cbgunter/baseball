@@ -5,7 +5,14 @@
       "Bash(npm run dev:*)",
       "Bash(git init:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(gh:*)",
+      "Bash(aws sts get-caller-identity:*)",
+      "Bash(git branch:*)",
+      "Bash(git remote add:*)",
+      "Bash(git push:*)",
+      "Bash(npx cdk:*)",
+      "Bash(npm run cdk:*)"
     ],
     "deny": [],
     "ask": []

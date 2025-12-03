@@ -14,7 +14,14 @@
     "deploy": "npm run deploy --workspace=infrastructure",
     "cdk": "npm run cdk --workspace=infrastructure"
   },
-  "keywords": ["baseball", "humor"],
+  "keywords": [
+    "baseball",
+    "humor"
+  ],
   "author": "Casey Hunter",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "ts-node": "^10.9.2"
+  }
 }

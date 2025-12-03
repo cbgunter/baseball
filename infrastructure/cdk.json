@@ -1,5 +1,5 @@
 {
-  "app": "npx ts-node bin/app.ts",
+  "app": "node -r ts-node/register bin/app.ts",
   "watch": {
     "include": [
       "**"
